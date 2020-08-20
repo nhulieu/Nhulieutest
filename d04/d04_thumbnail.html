@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thumb-nail</title>
+    <style>
+        .small{
+            width: 200px;
+            height: 150px;
+        }
+
+        .big{
+            width: 500px;
+            height: 350px;
+        }
+        #galary{
+            position: relative;
+        }
+        #galary ul{
+            list-style-type: none;
+            width: 450px;
+        }
+
+        #galary span{
+            display: none;
+            position: absolute;
+            top: 10px;
+            left: 500px;
+        }
+
+        #galary li{
+            display: inline;
+            padding:  10px;
+            float: left; 
+        }
+
+        #galary li:hover span{
+            display: inline;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <h2>Den trung thu</h2>
+    <hr>
+
+    <div id="galary">
+    <ul>
+        <li>
+            <a href="../image/dog1.jpg">
+            <img src="../image/dog1.jpg" alt=""class="small"><span><img src="../image/dog1.jpg" alt=""class="big"></span></li></a>
+        <li>
+            <a href="../image/long den 2.jpg">
+            <img src="../image/long den 2.jpg" alt=""class="small"><span><img src="../image/long den 2.jpg" alt=""class="big"></span></li></a>
+        <li>
+            <a href="../image/long den 3.jpg"> 
+            <img src="../image/long den 3.jpg" alt=""class="small"><span><img src="../image/long den 3.jpg" alt=""class="big"></span></li></a>
+        <li>
+            <a href="../image/long den.jpg"> 
+            <img src="../image/long den.jpg" alt=""class="small"><span><img src="../image/long den.jpg" alt=""class="big"></span></li></a>
+    </ul>
+</div>  
+</body>
+</html>

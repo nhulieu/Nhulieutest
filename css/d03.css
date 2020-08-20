@@ -1,0 +1,68 @@
+/*  day la file css cho cac thu muc cua bai d03 */ 
+
+/* universal selector */
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Type selector */
+a{
+    text-decoration: none;
+}
+
+h2{
+    color: red;
+}
+/* class selector, co ten bat dau bang dau .*/
+.autumn{
+    font-style: italic;
+    width: 50%;
+    border: double medium brown;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 2rem;
+
+   background-image: url("../image/hinh\ trang.jpg");
+   background-repeat: no-repeat;
+   background-size: 100%;
+}
+/* pseudo class : : ::first-letter, ap dung cho ky tu dau tien cua the p co class = title */
+p.title::first-letter{
+    font-size: 200%;
+
+}
+
+/* pseudo class : : ::first-line, ap dung cho dong dau tien cua the p co class = title */
+p.title::first-line{
+    font-style: normal;
+    font-weight: bold;
+
+}
+
+p{
+    text-index : 20px;
+}
+
+/* pseudo class : : ::hover, ap dung cho dong dau tien cua the p co class = title */
+a:hover{
+    font-weight: bolder;
+    background-color: salmon;
+
+}
+/* id selector, co ten bat dau bang dau # */
+#menu{
+    font-family:'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: royalblue;
+}
+
+div>img{
+    border: crimson groove medium;
+    border-radius: 200px;
+    width: 500px;
+  
+
+}
