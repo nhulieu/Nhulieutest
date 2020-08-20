@@ -1,8 +1,30 @@
 .home{ width: 1000px; height: 500px}
+*{
+    margin: 0;
+    padding: 0;
+}
+#menu ul{
+    list-style-type: none;
+    text-align: center;
+}
+#menu li{
+    display: inline;
+}
+
+#menu li > a{
+    margin-right: 20px;   
+}
+
 h1{
-    background: green; color : cornsilk}
+    background: green; color : cornsilk
+}
+
+section{
+    text-align: center;              
+}
+
 img{
-   
     height: 400px;
     width: 600px;
 }
+
