@@ -6,74 +6,25 @@
 #menu ul{
     list-style-type: none;
     text-align: center;
-    border: groove;
 }
 #menu li{
     display: inline;
 }
 
 #menu li > a{
-    margin-right: 40px;   
-    font-weight: bold;
+    margin-right: 20px;   
 }
 
 h1{
     background: green; color : cornsilk
 }
 
-section{   
-    text-align: center;   
-    margin: auto;              
+section{
+    text-align: center;              
 }
 
 img{
     height: 400px;
     width: 600px;
 }
-
-#member ul{
-  padding: 20px;
-  line-height: 200%;
-}
-
-.form{    
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    border-style: groove;
-}
-
-
-
-.form tr{
-    text-align: left;
-}
-
-table{
-    width: 100%;
-}
-
-table tr td{
-    width: 30%;
-}
-
-table tr td input{
-    width: 95%;
-}
-
-table tr td.submit{
-    text-align: right;
-}
-
-table tr td.reset{
-    text-align: left;
-}
-
-table tr td.gender input{
-    width: 20%;
-}
-
-
-
-
 
