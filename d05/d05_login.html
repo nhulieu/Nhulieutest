@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+
+        label{
+            
+            width: 200px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        input:required{
+            border:lightpink solid medium;
+        }
+
+        input[type="submit"],
+        input[type="reset"]
+        {
+            font-size: 1.051rem;
+            border-radius: 5px;
+            padding: 2px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Log in</h2>
+    <hr>
+        <form action="d05_table2.html" method="POST">
+            <label for="">Username : </label>
+            <input type="text" name="txtUser" id="txtUser" value="aptech"
+                placeholder="nhap tai khoan"
+                required><br> <br>
+
+            <label for="">Password : </label>
+            <input type="password" name="txtPass" id="txtPass" value="123"
+                placeholder="nhap mat khau"
+                required><br> <br>
+                
+            <label for="">Remember Password: </label>
+            <input type="checkbox" name="ckRem" id="ckRem" checked><br>
+
+            <input type="submit" value="Login">
+            <input type="reset" value="Reset">
+        </form>
+
+</body>
+</html>
