@@ -6,12 +6,15 @@
 #menu ul{
     list-style-type: none;
     text-align: center;
+    border: groove;
 }
 #menu li{
     display: inline;
 }
 
 #menu li > a{
+    margin-right: 40px;   
+    font-weight: bold;
     margin-right: 20px;   
 }
 
@@ -20,7 +23,8 @@ h1{
 }
 
 section{
-    text-align: center;              
+    text-align: center;    
+    margin: auto;             
 }
 
 img{
