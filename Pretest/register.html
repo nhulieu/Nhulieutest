@@ -35,9 +35,9 @@
             </li>
         </ul>        
         <br>
-        <section class="form">
+        <section class="form" >
             <h1><b>MEMBER INFORMATION</b></h1>   
-            <form action="">
+            <form action="pretest1.html"  method="POST">
                 <table>
                     <tr>
                         <td>Full name</td>
@@ -48,8 +48,8 @@
                     <tr>
                         <td>Gender</td>
                         <td class="gender">
-                            Male<input type="radio" name="rdNam" id="rdNam">
-                            Female<input type="radio" name="rdNu" id="idNu" >
+                            Male<input type="radio" name="Gender" id="rdNam">
+                            Female<input type="radio" name="Gender" id="idNu" >
                         </td>
                     </tr>                                                                      
                     <tr>
@@ -85,7 +85,7 @@
                             Phone Number
                         </td>
                         <td>
-                            <input type="tel">
+                            <input type="tel" name="telphone" id="telphone">
                         </td>
                     </tr>
                     <tr>
@@ -114,7 +114,7 @@
                     </tr>
                     <tr>
                         <td class="submit">
-                            <button type="submit">Submit</button>                            
+                            <button onsubmit="submit()" type="submit">Submit</button>                            
                         </td>
                         <td class="reset">
                             <button type="reset">Reset</button>
@@ -123,8 +123,15 @@
                 </table>
             </form>
         </section>   
-    </div>
-     
+    </div>    
      
 </body>
+
+<script>
+    function submit(){
+        alert("Login success");
+        return false;
+    }
+
+</script>
 </html>
