@@ -28,3 +28,51 @@ img{
     width: 600px;
 }
 
+#member ul{
+  padding: 20px;
+  line-height: 200%;
+}
+
+.form{    
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    border-style: groove;
+}
+
+
+
+.form tr{
+    text-align: left;
+}
+
+table{
+    width: 100%;
+}
+
+table tr td{
+    width: 30%;
+}
+
+table tr td input{
+    width: 95%;
+}
+
+table tr td.submit{
+    text-align: right;
+}
+
+table tr td.reset{
+    text-align: left;
+}
+
+table tr td.gender input{
+    width: 20%;
+}
+
+table tr td.hobbie input{
+    width: 20px;
+}
+
+
+

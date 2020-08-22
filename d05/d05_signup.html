@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRegister</title>
+    <style>
+        *{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        input[type="submit"],
+        input[type="reset"]
+        {
+            font-size: 1.05rem;
+            border-radius: 5px;
+            padding: 2px 15px;
+        }
+
+        .formlogin{
+            margin-top: 10px;
+            width: 50%;
+            margin-left: auto ;
+            margin-right: auto;
+
+            border: groove peachpuff thin;
+        }
+
+        input:required{
+            border: greenyellow solid medium;
+        }
+    </style>
+</head>
+<body>
+    <DIv class="formlogin">
+        <h2>
+            SIGN UP
+        </h2>
+        <hr>
+            <form action="d05_login.html" method="post">
+                <table>
+                    <tr>
+                        <td>Username</td>
+                        <td><input type="text" name="txtUser" id="txtUser"
+                            value="QN" required></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" name="txtEmail" id="txtEmail" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" name="txtPass" id="txtPass" value="123" required></td>
+                    </tr>
+                    <tr>
+                        <td>Call</td>
+                        <td><input type="tel" name="txtPhone" id="txtPhone"></td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            Male <input type="radio" name="rdGender" id="rdNam" checked>
+                            Female <input type="radio" name="rdGender" id="rdNu" checked>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Birhtday</td>
+                        <td><input type="date" name="txtDoB" id="txtDoB" value="2002-08-15"></td>
+                    </tr>
+                    <tr>
+                        <td>City</td>
+                        <td>
+                            <select name="cbCity" id="City" required>
+                                <option value="">----Select----</option>
+                                <option value="SG">Saigon</option>
+                                <option value="HN">Hanoi</option>
+                                <option value="Hu">Hue</option>
+                                <option value="DL">DaLat</option>
+                                <option value="CT">CanTho</option>
+                            </select>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hobbies</td>
+                        <td>
+                            Eat<input type="checkbox" name="ckEat" id="ckEat" checked>
+                            Sleep<input type="checkbox" name="ckSle" id="ckSle" checked>
+                            Game<input type="checkbox" name="ckGa" id="ckGa" checked>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Level</td>
+                        <td>
+                        <input type="number" name="txtLevel" id="txtLevel" min="1" max="10">
+                        </td>
+                    </tr>    
+                     <tr>  
+                        <td colspan="2">
+                            <input type="submit" value="Login">
+                            <input type="reset" value="Reset">
+
+                        </td>
+                        
+                    </tr>
+                </table>
+
+
+            </form>
+    </DIv>
+</body>
+</html>
