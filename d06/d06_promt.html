@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+    <link rel="stylesheet" href="../css/d06.css">
+</head>
+<body>
+   <h2>prompt() demo</h2> 
+   <hr>
+   <input type="button" value="Mini casio" id="btCasio" name="btCasio">
+   <br>
+   <p id='result'></p>
+
+   <script>
+       document.getElementById('btCasio').onclick = function(){
+           var r = prompt("input expression");
+           document.getElementById("result").innerHTML = eval(r);
+       }
+   </script>
+</body>
+</html>

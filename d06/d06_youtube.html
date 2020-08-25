@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.css">
+</head>
+
+<body>
+    <h3>Video-Demo</h3>
+    <div class="container">
+        <a href="https://www.youtube.com/watch?v=fXpJlk0sTGU" class="play-btn" id="video2">
+            Saturday</a>
+    </div class="container">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js"></script>
+
+    <script>
+        $("#video2").magnificPopup({ type: 'iframe' });
+    </script>
+</body>
+</html>
