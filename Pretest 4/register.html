@@ -85,9 +85,9 @@
                                     Would you visit again ? 
                                 </td>
                                 <td>
-                                    Yes<input type="radio" name="choose" id="yes" value="yes">
-                                    No<input type="radio" name="choose" id="no" >
-                                    Maybe<input type="radio" name="choose" id="maybe">
+                                    Yes<input type="radio" name="choose" id="yes" value="Yes">
+                                    No<input type="radio" name="choose" id="no" value="No">
+                                    Maybe<input type="radio" name="choose" id="maybe" value="Maybe">
                                 </td>
                             </tr>
                             <tr>
@@ -124,20 +124,21 @@
      </footer>
     </body>
 
-        <script>
-            document.getElementById("register-form").onsubmit = function(){
-                var form = document.getElementById("register-form");
-                alert(
-                    "Thank you for submit! \n"+
-                    "Name: " + form.txtName.value + "\n" +
-                    "Email: " + form.txtemail.value + "\n" + 
-                    "How did you hear about us?: " + form.browser.value + "\n" + 
-                    "Would you visit again?: " + form.choose.value + "\n" + 
-                    "Comment: " + form.comment.value + "\n" + 
-                    "Sign me up for email updates: " + form.update.value + "\n"
-                );
-                return true;
+    <script>
+        document.getElementById("register-form").onsubmit = function(){
+            var form = document.getElementById("register-form");
+            alert(
+                "Thank you for submit! \n"+
+                "Name: " + form.txtName.value + "\n" +
+                "Email: " + form.txtemail.value + "\n" + 
+                "How did you hear about us?: " + form.browser.value + "\n" + 
+                "Would you visit again?: " + form.choose.value + "\n" + 
+                "Comment: " + form.comment.value + "\n" + 
+                "Sign me up for email updates: " + form.update.value + "\n"
+            );
+            return true;
+        }
 
-        </script>
+    </script>
    
 </html>
