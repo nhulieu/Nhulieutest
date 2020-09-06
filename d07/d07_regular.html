@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular</title>
+</head>
+<body>
+    <h2>Regular expression Demo</h2>
+    <hr>
+    <form action="" method="POST" name="formTEST" id="formTEST">
+        <input type="text" name="txtName" id="txtName" placeholder="Nhap ho ten cua ban">
+        <br><br>
+        <input type="button" value="check" name="btCHECK" id="btCHECK">
+
+
+
+    </form>
+    <SCript>
+        document.getElementById("btCHECK").onclick = function () {
+            var hoten = document.getElementById("txtName").value;
+            
+            //tao bieu thưc qui tac de kiem tra
+            // ho ten hop le : chi chua ky tu chu a-z va khoang trang
+            // tu 3=> 20 ky tu
+            var re = /^[a-z A-Z]{3,20}$/;
+            // tien hanh kiem tra
+            if(re.test(hoten)){
+                alert("OK - GOOD !");
+            }
+            else{
+                alert(" ho va ten khong hop le. Vui long nhâp lai !")
+            }
+        }
+    </SCript>
+</body>
+</html>

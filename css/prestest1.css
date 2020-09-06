@@ -15,7 +15,7 @@
 #menu li > a{
     margin-right: 40px;   
     font-weight: bold;
-    margin-right: 20px;   
+     
 }
 
 h1{
@@ -40,7 +40,7 @@ img{
 .form{    
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 40%;
     border-style: groove;
 }
 

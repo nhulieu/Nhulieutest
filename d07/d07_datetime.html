@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateTime</title>
+    <link rel="stylesheet" href="../css/d07.css">
+</head>
+<body>
+    <div class="container">
+        <h2>DateTime Demo</h2>
+        <hr>
+
+        <form action="" method="POST">
+            input your birthday: <br>
+            <input type="date" name="txtDOB" id="txtDOB" value="2000-08-15"><br><br>
+
+            <input type="button" value="Click" id="btClick" name="btClick" onclick="getAge()">
+
+            <p id="note"></p>
+        </form>
+
+    </div>
+
+    <script>
+        function getAge() {
+            var ngaySinh = document.getElementById("txtDOB").value;
+        
+
+            var re = /\d{4}/;
+            var namsinh = re.exec(ngaySinh);
+            
+            var namHIENTAI = new Date().getFullYear();
+
+            var tuoi = namHIENTAI - namsinh;
+
+            var s= tuoi<18?"Khong du tuoi" : ("Nam da truong thanh, " + tuoi + " roi !");
+
+          
+                document.getElementById("note").innerHTML = s;
+            
+        }    
+    </script>
+</body>
+</html>

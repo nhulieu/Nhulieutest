@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox</title>
+    <link rel="stylesheet" href="../css/d07.css">
+</head>
+<body>
+    <h2>CHECK DEMO</h2>
+    <hr>
+    <div class="container">
+        <form action="" method="POST">
+            which language do u know ? <br>
+
+            <input type="checkbox" name="lan" id="lan1" value="viet" checked> Vietnamese
+            <input type="checkbox" name="lan" id="lan2" value="anh"> English
+            <input type="checkbox" name="lan" id="lan3" value="hoa"> Chinese
+            <input type="checkbox" name="lan" id="lan4" value="phap"> Francais
+
+            <br><br>
+            <input type="button" value="click" id="btCLICK" name="btCLICK" onclick="getLan()">
+
+            <p id="note"></p>
+        </form>
+
+        <script>
+            function getLan(){
+                // lay doi tuong checkbox
+                var xlan= document.getElementsByName("lan");
+
+                var s="your languages : ";
+                for (let i = 0; i < xlan.length; i++) {
+                    if(xlan[i].checked){
+                        s += xlan[i].value + " ";
+                    }
+                    
+                }
+
+                document.getElementById("note").innerHTML = s ;
+            }
+        </script>
+
+    </div>
+</body>
+</html>

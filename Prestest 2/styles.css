@@ -1,0 +1,70 @@
+.require{
+    color: red;
+}
+
+.container{
+    display: flex;    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* border: groove 1px; */
+    justify-content: center;
+}
+
+.main{
+    width: 60%;
+}
+
+h2.register-title{
+    color: blue;
+    text-align: center;
+}
+
+.container-header{    
+    text-align: left;
+    /* border: groove 1px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.container-body{
+    /* border: groove 1px; */
+    text-align: left;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form{    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
+    /* border: groove 1px; */
+}
+
+.form>table{
+    width: 100%;
+}
+
+.label{
+    width: 40%;
+    text-align: right;
+    justify-content: right;
+}
+
+.value{
+    width: 60%;
+    text-align: left;
+    justify-content: left;
+}
+
+.vld-message{
+    width: 60%;
+    text-align: left;
+    color: red;
+}
+
+.note{
+    color: blue;
+}
+
+

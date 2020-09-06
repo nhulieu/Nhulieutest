@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio</title>
+    <link rel="stylesheet" href="../css/d07.css">
+</head>
+<body>
+    <div class="container">
+        <h2>
+            Radio-button Demo
+        </h2>
+        <hr>
+
+        <form action="" method="POST">
+            which color do you like ? <br>
+            <input type="radio" name="color" id="color1" value="do" checked class="mau">RED
+            <input type="radio" name="color" id="color2" value="xanhla" class="mau">GREEN
+            <input type="radio" name="color" id="color3" value="vang" class="mau">YELLOW
+            <input type="radio" name="color" id="color4" value="hong" class="mau">ROSE
+            <BR><BR>
+
+             <input type="button" value="click" id="btCLICK" name="btCLICK" onclick="getColor()">
+             
+             <p id="note"></p>
+
+        </form>
+    </div>
+    <script>
+        function getColor() {
+            var c = document.querySelector(".mau:checked").value;
+            document.getElementById("note").innerHTML = "Mau yeu thich cua Nam : " + c;
+          }
+    </script>
+</body>
+</html>

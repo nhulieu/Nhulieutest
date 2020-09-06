@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String split</title>
+    <link rel="stylesheet" href="../css/d08.css">
+
+</head>
+<body>
+    <div>
+        <h2>String-Split</h2>
+        <hr>
+        <form action="" method="POST">
+            <input type="text" name="txtString" id="txtString" placeholder="nhap 1 chuoi" value="Lieu Quynh Nhu">
+            <br><br>
+            
+        
+            <input type="button" value="Click" name="btnClick" id="btnClick">
+            <br><br>
+            <textarea name="txtNote" id="txtNote" cols="30" rows="10" readonly>
+nothing
+            </textarea>
+        </form>    
+    </div>
+    <script>
+        document.getElementById('btnClick').onclick=function(){
+            var s = new String(document.getElementById("txtString").value);
+            var re = /h/g  //global : toàn cục - thay thế cho tất cả 
+            s= s.replace(re,'P');
+            var a = s.split(" ");
+
+            document.getElementById("txtNote").innerHTML = a.join("\n"); 
+        }
+    </script>
+</body>
+</html>

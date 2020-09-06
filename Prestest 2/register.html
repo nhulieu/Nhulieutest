@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="register-title">REGISTRATION FORM</h2>
+    <div class="container">
+        <div class="main">
+            <div class="container-header">
+                <a class="note">Notes:</a><br>
+                <a>1. Field with (<a class="require">*</a>) mark must be entered.</a><br>
+                <a>2. Login name have no space.</a>
+            </div> 
+            <div class="container-body">    
+                <form id="register-form" action="home.html" onsubmit="" class="form">
+                    <table>
+                        <tr>
+                            <td class="label">
+                                Login name<a class="require">*</a>
+                            </td>
+                            <td class="value">
+                                <input type="text" name="username" id="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"></td>
+                            <td class="vld-message" id="vldUsername"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Password<a class="require">*</a>
+                            </td>
+                            <td class="value">
+                                <input type="password" name="password" id="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"></td>
+                            <td class="vld-message" id="vldPw"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Password Confirm<a class="require">*</a>
+                            </td>
+                            <td class="value">
+                                <input type="password" name="re-password" id="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"></td>
+                            <td class="vld-message" id="vldPwConfirm"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Full name<a class="require">*</a>
+                            </td>
+                            <td class="value">
+                                <input type="text" name="name" id="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Address<a class="require">*</a>
+                            </td>
+                            <td class="value">
+                                <input type="text" name="address" id="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Email<a class="require">*</a>
+                            </td>
+                            <td class="value">
+                                <input type="email" name="email" id="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Sex
+                            </td>
+                            <td class="value">
+                                <input type="radio" name="sex" value="0" id="">Male<input type="radio" name="sex" value="1" id="">Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Date of birth
+                            </td>
+                            <td class="value">
+                                <input type="date" name="dob" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"></td>
+                            <td class="vld-message" id="vldDob"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Country
+                            </td>
+                            <td class="value">
+                                <select name="country" id="">
+                                    <option value="Việt Nam">Việt Nam</option>
+                                    <option value="USA">USA</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="Korea">Korea</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"></td>
+                            <td class="vld-message" id="vldDob"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Phone number
+                            </td>
+                            <td class="value">
+                                <input type="tel" name="phone" id="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label"></td>
+                            <td class="vld-message" id="vldPhone"></td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Hobbies
+                            </td>
+                            <td class="value">
+                                <input type="checkbox" name="hobbies[]" id="">Swimming
+                                <input type="checkbox" name="hobbies[]" id="">Dancing
+                                <input type="checkbox" name="hobbies[]" id="">Shopping
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                                Comment
+                            </td>
+                            <td class="value">
+                                <textarea name="comment" id="" cols="30" rows="5"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label">
+                            </td>
+                            <td class="value">
+                                <input type="submit" value="Submit">
+                                <input type="reset" value="Reset">
+                            </td>
+                        </tr>
+                    </table>
+                </form>   
+                
+            </div>  
+        </div>                         
+    </div>    
+</body>
+<script type="text/javascript">
+    document.getElementsByName("dob")[0].onchange = function(){
+        if(document.getElementsByName("dob")[0].value.includes("02-29")){ 
+            document.getElementById("vldDob").innerHTML = "Leap year !"; 
+        }
+    }
+
+    document.getElementById("register-form").onsubmit = function(){
+        //Get information in the form
+        var username = document.getElementsByName("username")[0].value;
+        var pw = document.getElementsByName("password")[0].value;
+        var repw = document.getElementsByName("re-password")[0].value;
+        var name = document.getElementsByName("name")[0].value;
+        var address = document.getElementsByName("address")[0].value;
+        var email = document.getElementsByName("email")[0].value;
+
+        var genders = document.getElementsByName("sex");
+        var gender;
+        for(var i = 0; i < genders.length; i++){
+            if(genders[i].checked){
+                gender = genders[i].value;
+            }
+        }
+
+        var dob = document.getElementsByName("dob")[0].value;
+        
+        var countryEle = document.getElementsByName("country")[0];
+        country = countryEle.options[countryEle.selectedIndex].value;
+
+        var phone = document.getElementsByName("phone")[0].value;
+        var hobbies = document.getElementsByName("hobbies");
+
+        var submitable = true;
+
+        //Validate information
+        if(username.includes(" ")){
+            document.getElementById("vldUsername").innerHTML = "Login name must have no space.";
+            submitable = false;
+        }
+        if(username.length<5){
+            document.getElementById("vldUsername").innerHTML = "Length of Login name is five characters at least.";
+            submitable = false;
+        }
+        if(pw.length <5){
+            document.getElementById("vldPw").innerHTML = "Length of Password is five characters at least.";
+            submitable = false;
+        }
+
+        if(repw.length < 5){
+            document.getElementById("vldPwConfirm").innerHTML = "Length of Password is five characters at least.";
+            submitable = false;
+        }
+
+        if(pw != repw){
+            document.getElementById("vldPw").innerHTML = "Password is not the same as Password confirm";
+            document.getElementById("vldPwConfirm").innerHTML = "Password is not the same as Password confirm";
+            submitable = false;
+        }
+
+        var phoneRegex = /\d/g;
+        if(phone.match(phoneRegex).length != phone.length){
+            document.getElementById("vldPhone").innerHTML = "Phone must have digit only";
+            submitable = false;
+        }
+
+        if(submitable == false){
+            return false;
+        }
+        //If validate success
+        alert("Welcome to Education Web !");
+        return true;
+
+    }
+</script>
+</html>

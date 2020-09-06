@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH</title>
+</head>
+<body>
+    <H1>>MATH DEMO</H1>
+    <hr>
+
+    <form action="" method="POST">
+
+        <label for="">In put [1-6]</label>
+        <input type="number" name="txtNum" id="txtNum" min="1" max="6" value="1">
+        <br><br>
+
+        <input type="button" value="Submit" name="btnSubmit" id="btnSubmit">
+        <br><br>
+        Win: <input type="number" name="win" id="win" readonly min="0" max="100" value="0">
+        Lost: <input type="number" name="lost" id="lost" readonly min="0" max="100" value="0">
+
+    </form>
+
+    <script>
+        var win = 0;
+        var lost = 0;
+        
+        document.getElementById("btnSubmit").onclick = function(){
+            //lay so nhap
+            var n = document.getElementById("txtNum").value;
+
+            //tao mot so ngau nhien
+            var nn = Math.round(Math.random()*5) + 1 ; 
+            //kiem tra
+            if(n == nn){
+                alert("Wow, correct!!!");
+                win ++;
+                document.getElementById("win").value = win;
+            }
+            else{
+                alert("Sorry!, the number is: " + nn);
+                lost++;
+                document.getElementById("lost").value = lost;
+                
+            }
+            var count = win + lost;
+            if(count == 10){
+                if(win>lost){
+                    alert("You are winner!!!");
+                }
+                else if (win == lost){
+                    alert("Breakeven!");
+                }
+                else{
+                    alert("Loser!");
+                }
+                window.open();
+            }
+        }
+    </script>
+    
+</body>
+</html>
+
