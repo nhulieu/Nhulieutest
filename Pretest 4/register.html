@@ -36,7 +36,7 @@
             </div>
             <h2>CONTACT US</h2>
             <div>
-                <form id="register-form" action="home.html" onsubmit="onSubmit()" class="form">
+                <form id="register-form" action="home.html" class="form">
                     <fieldset>
                         <table>
                             <legend>
@@ -47,7 +47,7 @@
                                     Name : 
                                 </td>
                                 <td class="value">
-                                    <input class="require-input" type="text" name="txtName" id="" required><a class="require">*</a>
+                                    <input class="require-input" type="text" name="txtName" id="" required pattern="(\w|\s){3,}" title="Name has at least 3 characters including letters or space."><a class="require">*</a>
                                 </td>
                             </tr>
         
@@ -100,7 +100,7 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="choose" id="yes" value="yes" checked> Sign me up for email update
+                                    <input type="checkbox" name="update" id="yes" value="yes" checked> Sign me up for email update
                                 </td>
                             </tr>    
                             <br>
@@ -122,10 +122,22 @@
     <footer>
         <center><b>© 2020 - ABC COMPANY</b></center>
      </footer>
-</body>
-<script>
-    function onSubmit(){
+    </body>
 
-    }
-</script>
+        <script>
+            document.getElementById("register-form").onsubmit = function(){
+                var form = document.getElementById("register-form");
+                alert(
+                    "Thank you for submit! \n"+
+                    "Name: " + form.txtName.value + "\n" +
+                    "Email: " + form.txtemail.value + "\n" + 
+                    "How did you hear about us?: " + form.browser.value + "\n" + 
+                    "Would you visit again?: " + form.choose.value + "\n" + 
+                    "Comment: " + form.comment.value + "\n" + 
+                    "Sign me up for email updates: " + form.update.value + "\n"
+                );
+                return false;
+
+        </script>
+   
 </html>
