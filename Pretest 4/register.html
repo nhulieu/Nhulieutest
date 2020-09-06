@@ -7,87 +7,125 @@
     <link rel="stylesheet" href="../Pretest 4/style.css">
 </head>
 <body>
-      <div class="container">
-            <img src="../image/pretest4/logo.jpg" alt="">  
-            <h1>AMAZING BRIDES</h1> 
+    <div class="main-contain">
+        <div class="main-contain">
+            <div class="container">
+                <img src="../image/pretest4/logo.jpg" alt="">  
+                <h1>AMAZING BRIDES</h1> 
+            </div>
+            <div id="menu">
+                <br>
+                <ul>
+                    <li>
+                        <a href="">HOME</a>
+                    </li>                  
+                    <li>
+                        <a href="">WORLD BRIDES</a>
+                    </li>        
+                    <li>
+                        <a href="">TOP LONGEST</a>
+                    </li>        
+                    <li>
+                        <a href="">TOP HIGHEST</a>
+                    </li>        
+                    <li>
+                        <a href="../Pretest 4/register.html">CONTACT</a>
+                    </li>
+                </ul>
+                <br>
+            </div>
+            <h2>CONTACT US</h2>
+            <div>
+                <form id="register-form" action="home.html" onsubmit="onSubmit()" class="form">
+                    <fieldset>
+                        <table>
+                            <legend>
+                            <h4>Your detail :</h4>
+                            </legend>     
+                            <tr>
+                                <td class="label">
+                                    Name : 
+                                </td>
+                                <td class="value">
+                                    <input class="require-input" type="text" name="txtName" id="" required><a class="require">*</a>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td class="label">
+                                    Email : 
+                                </td>
+                                <td class="value">
+                                    <input class="require-input" type="email" name="txtemail" id="" required><a class="require">*</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <table>
+                            <legend>
+                            <h4>Your review :</h4>
+                            </legend>     
+                            <tr>
+                                <td>
+                                    How dis you hear about us ? 
+                                </td>
+                                <td>
+                                    <select name="browser" id="browser" required>
+                                        <option value="Google">Google</option>
+                                        <option value="Friend">Friend</option>
+                                        <option value="Advert">Advert</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td>
+                                    Would you visit again ? 
+                                </td>
+                                <td>
+                                    Yes<input type="radio" name="choose" id="yes" value="yes">
+                                    No<input type="radio" name="choose" id="no" >
+                                    Maybe<input type="radio" name="choose" id="maybe">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Comment
+                                </td>
+                                <td class="value">
+                                    <textarea name="comment" id="" cols="30" rows="5"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="choose" id="yes" value="yes" checked> Sign me up for email update
+                                </td>
+                            </tr>    
+                            <br>
+                            <tr>
+                                <td class="value">
+                                    <input type="submit" value="Submit">
+                                    <input type="reset" value="Reset">
+                                </td>
+        
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-        <div id="menu">
-            <br>
-            <ul>
-                <li>
-                    <a href="">HOME</a>
-                </li>                  
-                <li>
-                    <a href="">WORLD BRIDES</a>
-                </li>        
-                <li>
-                    <a href="">TOP LONGEST</a>
-                </li>        
-                <li>
-                    <a href="">TOP HIGHEST</a>
-                </li>        
-                <li>
-                    <a href="../Pretest 4/register.html">CONTACT</a>
-                </li>
-            </ul>
-            <br>
-        </div>
-        <h2>CONTACT US</h2>
-        <div>
-            <form id="register-form" action="home.html" onsubmit="" class="form"></form>
-                <fieldset>
-                    <table>
-                        <legend>
-                        <h4>Your detail :</h4>
-                        </legend>     
-                        <tr>
-                            <td class="label">
-                                Name : 
-                            </td>
-                            <td class="value">
-                                <input type="text" name="txtName" id="" required><a class="require">*</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="label">
-                                Email : 
-                            </td>
-                            <td class="value">
-                                <input type="email" name="txtemail" id="" required><a class="require">*</a>
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-            </form>
-        </div> 
-        <div>
-            <form id="register-form" action="home.html" onsubmit="" class="form"></form>
-                <fieldset>
-                    <table>
-                        <legend>
-                        <h4>Your detail :</h4>
-                        </legend>     
-                        <tr>
-                            <td class="label">
-                                Name : 
-                            </td>
-                            <td class="value">
-                                <input type="text" name="txtName" id="" required><a class="require">*</a>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td class="label">
-                                Email : 
-                            </td>
-                            <td class="value">
-                                <input type="email" name="txtemail" id="" required><a class="require">*</a>
-                            </td>
-                        </tr>
-                    </table>
-                </fieldset>
-            </form>
-        </div>
+    </div>
+     
+    <br>        
+    <footer>
+        <center><b>© 2020 - ABC COMPANY</b></center>
+     </footer>
 </body>
+<script>
+    function onSubmit(){
+
+    }
+</script>
 </html>

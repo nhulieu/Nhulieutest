@@ -7,6 +7,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: black 2px 2px 2px;
     display: inline;
+    
 }
 section{
    display: right;
@@ -41,4 +42,11 @@ h2{
 }
 table td{
     margin-right: 10px;
+}
+
+.require-input{
+    border-bottom: groove blue 3px;
+    border-left: groove gray 1px;
+    border-right: groove gray 1px;
+    border-top: groove gray 1px;
 }
