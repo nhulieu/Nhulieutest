@@ -1,0 +1,44 @@
+.container{
+    justify-content: left;
+    font-style: italic;
+}
+.container > h1{
+    color: gray;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: black 2px 2px 2px;
+    display: inline;
+}
+section{
+   display: right;
+}
+
+#menu ul{
+    list-style-type: none;
+   
+}
+#menu li{
+    display: inline;
+}
+
+#menu li > a{
+    margin-right: 40px;   
+    font-weight: bold;
+    color: black; 
+}
+
+h2{
+    margin-right: 20%;
+    padding: 10px;
+    color: red;
+}
+ 
+.require{
+    color: red;
+}
+.form {
+    width: 50%;
+  
+}
+table td{
+    margin-right: 10px;
+}

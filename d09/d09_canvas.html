@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            border: firebrick double thin;
+            background-color: lavender;
+        }
+
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Canvas</h2>
+    <hr>
+    <canvas width="1000" height="500" id="bangve"></canvas>
+
+    <div>
+        <h2>Ve hinh chu nhat</h2>
+        <form action="" method="POST" id="formREC" name="formREC">
+            <label for="">Nhap toa do x : </label>
+            <input type="number" name="txtX" id="txtX" value="100" required max="500" min="10"><br><br>
+            <label for="">Nhap toa do y : </label>
+            <input type="number" name="txtY" id="txtY" value="100" required max="300" min="10"><br><br>
+
+            <label for="">Chon mau : </label>
+            <input type="color" name="txtColor" id="txtColor" value="Red">
+
+            <BR></BR>
+            <label for="">Nhap chieu rong </label>
+            <input type="number" name="txtW" id="txtW" value="100" required max="800" min="10"><br><br>
+            <label for="">Nhap chieu cao </label>
+            <input type="number" name="txtH" id="txtH" value="100" required max="300" min="10">
+
+
+            <input type="submit" value="Ve hinh chu nhat" id="btREC" name="btREC">
+
+        </form>
+        <script>
+            document.getElementById("formREC").onsubmit = function () {
+                var bv = document.getElementById("bangve");
+                var context = bv.getContext('2d');
+
+
+                context.lineWidth = 3;
+
+                var x = document.getElementById("txtX").value;
+                var y = document.getElementById("txtY").value;
+                var rong = document.getElementById("txtW").value;
+                var cao = document.getElementById("txtH").value;
+                var color = document.getElementById("txtColor").value;
+                
+
+
+                context.beginPath();
+                
+                context.fillStyle = color;
+                context.rect(x, y, rong, cao);
+                
+                context.fill();
+
+                return false;
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>

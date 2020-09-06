@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string</title>
+    <link rel="stylesheet" href="../css/d08.css">
+</head>
+<body>
+    <div>
+        <h2>String demo</h2>
+        <hr>
+        <form action="" method="POST">
+            <input type="text" name="txtString" id="txtString" placeholder="nhap 1 chuoi">
+            <br><br>
+            <input type="text" name="txtString" id="txtString2" value="nhu">
+            <br><br>
+            <input type="number" name="txtPos" id="txtPos" min="0" placeholder="nhap 1 so">
+            <br><br>
+            <input type="button" value="Click" name="btnClick" id="btnClick">
+            <br><br>
+            <textarea name="txtNote" id="txtNote" cols="30" rows="10" readonly>
+nothing
+            </textarea>
+        </form>    
+    </div>
+    <script>
+        document.getElementById("btnClick").onclick=function() {
+
+            var s = new String(document.getElementById("txtString").value);
+            var s2 = new String(document.getElementById("txtString2").value);
+            var i = document.getElementById("txtPos").value;
+
+            var r = 'Ky tu thu ' + i + ' la :'+ s.charAt(i);
+           
+
+            a = [];
+            a.push(s.toUpperCase());
+            a.push("Tong so ky tu: " + s.length);
+            a.push(r);
+
+            var pos1 = s.lastIndexOf(s2);
+            if(pos1<0){
+                a.push('chuoi [' + s + '] ko chua chuoi ['+s2+']');
+
+            }
+            else {
+                a.push('tim thay chuoi [' + s2 + '] trong  chuoi['+ s +'] tai vi tri ' + pos1);
+            }
+            document.getElementById("txtNote").innerHTML = a.join("\n");        
+
+        }
+    </script>
+</body>
+</html>

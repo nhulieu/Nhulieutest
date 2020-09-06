@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regular</title>
+</head>
+<body>
+    <h2>Regular Expression Demo</h2>
+    <hr>
+    <form action="" method="POST">
+        <input type="text" name="txtNum" id="txtNum" placeholder="Nhap 4 ky so">
+        <br><br>
+
+        <input type="button" value="check" name="btCHECK" id="btCHECK">
+
+    </form>
+
+    <SCRipt>
+        document.getElementById("btCHECK").onclick=function(){
+            //lay gia tri nhap trong o txtNum
+            var n = document.getElementById("txtNum").value;
+
+            // dinh nghia luat kiem tra 2 so dau giong 2 so duôi
+            var re = /^(\d{2})\1$/;
+
+            //kiem tra
+            if(re.test(n)){
+                alert("Chuc mung ban da trung so !");
+            }
+            else {
+                alert("Rat tiec, chuc ban may man lan sau");
+            }
+
+        }
+    </SCRipt>
+</body>
+</html>

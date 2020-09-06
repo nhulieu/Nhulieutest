@@ -37,19 +37,19 @@
         <br>
         <section class="form" >
             <h1><b>MEMBER INFORMATION</b></h1>   
-            <form action="pretest1.html"  method="POST">
+            <form id="register" onsubmit="onSubmit()" action="pretest1.html">
                 <table>
                     <tr>
                         <td>Full name</td>
                         <td>
-                            <input type="text" name="txtUser" id="txtUser" required>
+                            <input type="text" name="txtName" id="txtName" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Gender</td>
                         <td class="gender">
-                            Male<input type="radio" name="Gender" id="rdNam">
-                            Female<input type="radio" name="Gender" id="idNu" >
+                            Male<input type="radio" name="Gender" id="rdNam" value="Male">
+                            Female<input type="radio" name="Gender" id="idNu" value="Female">
                         </td>
                     </tr>                                                                      
                     <tr>
@@ -57,15 +57,15 @@
                             Hobbies
                         </td>
                         <td class="hobbie">
-                            Shopping<input type="checkbox" name="shop" id="shop">
-                            Eating out<input type="checkbox" name="eat" id="eat">
-                            Sporting<input type="checkbox" name="sport" id="sport">
+                            Shopping<input type="checkbox" name="hobbies" id="shop" value="Shopping">
+                            Eating out<input type="checkbox" name="hobbies" id="eat" value="Eating">
+                            Sporting<input type="checkbox" name="hobbies" id="sport" value="Sport">
                         </td>
                     </tr>
                     <tr>
                         <td>Date of birth</td>
                         <td>
-                           <input type="date" name="DOB" id="DOB">
+                           <input type="date" name="DOB" id="DOB" required>
                         </td>
                     </tr>
                     <tr>
@@ -77,7 +77,7 @@
                     <tr>
                         <td>Email</td>    
                         <td>
-                            <input type="email" name="txtemail" id="txtemail">
+                            <input type="email" name="txtemail" id="txtemail" required>
                         </td>
                     </tr>
                     <tr>
@@ -85,7 +85,7 @@
                             Phone Number
                         </td>
                         <td>
-                            <input type="tel" name="telphone" id="telphone">
+                            <input type="tel" name="telphone" id="telphone" required>
                         </td>
                     </tr>
                     <tr>
@@ -93,12 +93,12 @@
                             City
                         </td>
                         <td>
-                            <select name="city" id="city">
-                                <option value="sg">Sài Gòn</option>
-                                <option value="HN">Hà Nội</option>
-                                <option value="ĐN">Đà Nẵng</option>
-                                <option value="CT">Cần Thơ</option>
-                                <option value="orther">Khác</option>
+                            <select name="city" id="city" required>
+                                <option value="Sài Gòn">Sài Gòn</option>
+                                <option value="Hà Nội">Hà Nội</option>
+                                <option value="Đà Nẵng">Đà Nẵng</option>
+                                <option value="Cần Thơ">Cần Thơ</option>
+                                <option value="Khác">Khác</option>
                             </select>
                         </td>
                     </tr>
@@ -107,14 +107,12 @@
                             Comment
                         </td>
                         <td>
-                            <textarea name="" id="" cols="30" rows="10">
-
-                            </textarea>
+                            <textarea name="comment" cols="30" rows="10" required></textarea>
                         </td>
                     </tr>
                     <tr>
                         <td class="submit">
-                            <button onsubmit="submit()" type="submit">Submit</button>                            
+                            <input type="submit" value="Submit">                            
                         </td>
                         <td class="reset">
                             <button type="reset">Reset</button>
@@ -123,15 +121,64 @@
                 </table>
             </form>
         </section>   
-    </div>    
+    </div>  
+    <script>
+        function onSubmit(){
+            var newLine = "\r\n";
+            var name = document.getElementById("txtName").value;
+
+            var genders = document.getElementsByName("Gender");
+            var gender;
+            for(var i = 0; i < genders.length; i++){
+                if(genders[i].checked){
+                    gender = genders[i].value;
+                }
+            }
+          
+            var hobbies = document.getElementsByName("hobbies");
+            var hobbies_value = "";
+            for(var i = 0; i < hobbies.length;i++){
+                if(hobbies[i].checked == true){
+                    if(i == hobbies.length-1){
+                        hobbies_value += hobbies[i].value;
+                    }
+                    else{
+                        hobbies_value += hobbies[i].value + ", ";
+                    }
+                }
+            }
+
+            var dob = document.getElementById("DOB").value;
+
+            var address = document.getElementById("txtAd").value;
+
+            var email = document.getElementById("txtemail").value;
+
+            var phone = document.getElementById("telphone").value;
+
+            var cityElement = document.getElementsByName("city")[0];
+            var city = cityElement.options[cityElement.selectedIndex].value;
+
+            var comment = document.getElementsByName("comment")[0].value;
+            
+            var info = "Member Information: "+newLine;
+            info+="-------------------------"+newLine;
+            info+="Name: "+name+newLine;
+            info+="Gender: "+gender+newLine;
+            info+="Hobbies: "+ hobbies_value +newLine;  
+            info+="Birthday: "+dob+newLine;
+            info+="Address: "+address+newLine;
+            info+="Email: "+email+newLine;
+            info+="Phone: "+phone+newLine;
+            info+="City: "+city+newLine;
+            info+="Comment: "+comment+newLine;
+            alert(info);
+            return false;
+        }
+  
+  </script>  
      
 </body>
 
-<script>
-    function submit(){
-        alert("Login success");
-        return false;
-    }
 
-</script>
 </html>
