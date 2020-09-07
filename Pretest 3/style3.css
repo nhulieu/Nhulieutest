@@ -1,0 +1,49 @@
+.home{ width: 1000px; height: 500px}
+*{
+    margin: 0;
+    padding: 0;
+}
+#menu ul{
+    list-style-type: none;
+    text-align: center;
+    border: groove;
+}
+#menu li{
+    display: inline;
+}
+
+#menu li > a{
+    margin-right: 40px;   
+    font-weight: bold;
+     
+}
+.container{
+    display: flex;    
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    text-align: center;
+    width: 60%;
+    justify-content: center;
+}
+
+.photos{
+    width: 50%;
+}
+
+/* register css */
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.form{    
+    width: 40%;
+    text-align:left;
+    border: groove 1px;
+}
+
+
+
