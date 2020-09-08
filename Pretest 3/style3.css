@@ -45,5 +45,19 @@ section{
     border: groove 1px;
 }
 
+.submit{
+   background-color: red;
+   border-radius: 4px;
+   padding: 0 10px;
+}
 
+.reset{
+   background-color: royalblue; 
+   border-radius: 4px;
+   padding: 0 10px;
+}
+
+tr{
+    height: 30px;
+}
 
