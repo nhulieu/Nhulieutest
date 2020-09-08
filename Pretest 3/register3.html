@@ -11,14 +11,14 @@
         <div class="form">
             <H2>Student Information</H2>
             <hr>
-            <form id="form" action="home3.html" method="GET">
+            <form id="form" action="export-form.html">
                 <table>
                     <tr>
                         <td>
                             Name
                         </td>
                         <td>
-                            <input type="text" name="name" id="name"  required pattern="(\w|\s$){6,30}" title="Name has from 6 to 30 letter characters, including space.">
+                            <input type="text" name="name" id="name"  Required pattern="(\w|\s$){6,30}" title="Name has from 6 to 30 letter characters, including space.">
                         </td>
                     </tr>
                     <tr>
@@ -26,8 +26,8 @@
                             Gender
                         </td>
                         <td>
-                            Male<input type="radio" name="gender" id="Male">
-                            Female <input type="radio" name="gender" id="Female">
+                            Male<input type="radio" name="gender" value="Male" >
+                            Female <input type="radio" name="gender" value="Female">
                         </td>
                     </tr>
                     <tr>
@@ -43,7 +43,16 @@
                             Email
                         </td>
                         <td>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" pattern="(\w|\d){3}@(\w|\d){4}[.](\w|\d){3}"
+                            placeholder="xxx@xxxx.xxx">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone
+                        </td>
+                        <td>
+                            <input type="tel" name="phone" id="phone" pattern="\d{3}[-]\d{5}\[\d{3}\]$" placeholder="xxx-xxxxx[xxx] , x: digit.">
                         </td>
                     </tr>
                     <tr>
@@ -72,4 +81,26 @@
         </div>
     </div>
 </body>
+<script>
+document.getElementById("form").onsubmit = function () {
+    var form = document.getElementById("form");
+    var name = form.name.value;
+    var gender = form.gender.value;
+    var address = form.address.value;
+    var email = form.email.value;
+    var phone = form.phone.value;
+    var qualification = form.qualification.value;
+
+    var info = {"name":name, "gender":gender, "address":address,"email":email, "phone":phone, "qualification":qualification};
+    sessionStorage.setItem("info", JSON.stringify(info));
+    return true;
+
+    // sessionStorage.setItem("name", name);
+    // sessionStorage.setItem("gender", gender);
+    // sessionStorage.setItem("address", address);
+    // sessionStorage.setItem("email", email);
+    // sessionStorage.setItem("phone", phone);
+    // sessionStorage.setItem("qualification", qualification);
+}
+</script>
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export form</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form">
+            <H2>Student Information Registration Successfully</H2>
+            <hr>            
+            <form id="form" action="home3.html">
+                <table>
+                    <tr>
+                        <td>
+                            Name
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name"  Required pattern="(\w|\s$){6,30}" title="Name has from 6 to 30 letter characters, including space." readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Gender
+                        </td>
+                        <td>
+                            <input type="text" name="gender" id="Male" readonly >
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address
+                        </td>
+                        <td>
+                            <input type="text" name="address" id="address" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Email
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email" pattern="(\w|\d){3}@(\w|\d){4}[.](\w|\d){3}"
+                            placeholder="xxx@xxxx.xxx" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone
+                        </td>
+                        <td>
+                            <input type="tel" name="phone" id="phone" pattern="\d{3}[-]\d{5}\[\d{3}\]$" placeholder="xxx-xxxxx[xxx] , x: digit." readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Qualification
+                        </td>
+                        <td>
+                            <input type="text" name="qualification" id="qualification" readonly>                            
+                        </td>
+                    </tr>                    
+                </table>
+            </form>
+            <br>
+            <a href="home3.html">Click here to return to Student page</a>
+        </div>
+    </div>
+</body>
+<script>
+    var info = JSON.parse(sessionStorage.getItem("info"));
+    var form = document.getElementById("form")
+    form.name.value = info.name;
+    form.email.value = info.email;
+    form.address.value = info.address;
+    form.gender.value = info.gender;
+    form.phone.value = info.phone;
+    form.qualification.value = info.qualification;
+</script>
+</html>
