@@ -12,14 +12,14 @@
         <div class="form">
             <H2>Student Information</H2>
             <hr>
-            <form action="">
+            <form id="form" action="home3.html" method="GET">
                 <table>
                     <tr>
                         <td>
                             Name
                         </td>
                         <td>
-                            
+                            <input type="text" name="name" id="name"  equired pattern="(\w|\s$){6,30}" title="Name has from 6 to 30 letter characters, including space.">
                         </td>
                     </tr>
                     <tr>
@@ -27,7 +27,8 @@
                             Gender
                         </td>
                         <td>
-                            
+                            Male<input type="radio" name="gender" id="Male">
+                            Female <input type="radio" name="gender" id="Female">
                         </td>
                     </tr>
                     <tr>
@@ -35,7 +36,7 @@
                             Address
                         </td>
                         <td>
-                            
+                            <input type="text" name="address" id="address">
                         </td>
                     </tr>
                     <tr>
@@ -43,7 +44,7 @@
                             Email
                         </td>
                         <td>
-                            
+                            <input type="email" name="email" id="email">
                         </td>
                     </tr>
                     <tr>
@@ -51,7 +52,20 @@
                             Qualification
                         </td>
                         <td>
-                            
+                            <select name="qualification" id="qualification">
+                                <option value="Bachelor degree">Bachelor degree</option>
+                                <option value="Master">Master</option>
+                                <option value="PhD">PhD</option>
+                                <option value="None">None</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="submit">
+                            <input type="submit" value="Submit">                            
+                        </td>
+                        <td class="reset">
+                            <button type="reset">Reset</button>
                         </td>
                     </tr>
                 </table>

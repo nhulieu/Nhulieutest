@@ -45,5 +45,11 @@ section{
     border: groove 1px;
 }
 
+.submit{
+    color: royalblue;
+}
 
+.reset{
+    color: red;
+}
 
