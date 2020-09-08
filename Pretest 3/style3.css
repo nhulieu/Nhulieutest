@@ -46,10 +46,18 @@ section{
 }
 
 .submit{
-    color: royalblue;
+   background-color: red;
+   border-radius: 4px;
+   padding: 0 10px;
 }
 
 .reset{
-    color: red;
+   background-color: royalblue; 
+   border-radius: 4px;
+   padding: 0 10px;
+}
+
+tr{
+    height: 30px;
 }
 
