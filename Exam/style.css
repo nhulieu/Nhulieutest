@@ -1,0 +1,72 @@
+.home{ width: 1000px; height: 500px}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+.logo>h1{
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);   -webkit-background-clip: text;
+    color: transparent;
+}
+
+#menu ul{
+    list-style-type: none;
+    text-align: center;
+    border-top: groove 2px;
+    border-bottom: groove 2px;
+}
+#menu li{
+    display: inline;
+}
+
+#menu li > a{
+    margin-right: 40px;   
+    font-weight: bold;
+     
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.main{
+    width: 60%;
+    text-align: center;
+}
+
+.form{
+    width: 100%;
+    border: groove 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.form table{
+    width: 60%;
+    border: groove 1px;
+}
+
+
+
+.form table td{
+    text-align: left;
+    width: 50%;
+}
+
+.button{
+    border-radius: 6px;
+    padding: 5px 5px;
+}
+
+.checkbox{
+    margin-right: 5px;
+}
+
+.require{
+    border: groove 3px red;
+}
